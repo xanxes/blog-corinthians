@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="..\src\images\logo.png" alt="Logo do Corinthians" width="100">
+        <h1 id="title">Corinthians</h1>
+        <p id="title">As últimas notícias sobre Corinthians.</p>
+          <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Jogos</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Últimas Notícias</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <h2>Bem-vindo ao Nosso Blog!</h2>
+        <p>Aqui você encontra informações sobre o mundo do Corinthians
+           Navegue pelos nossos artigos para ficar por dentro de tudo.</p>
+        <aside>
+            <h3>Artigos Populares</h3>
+            <ul class="noticias-lista">
+                <li class="noticias-card">
+                    <img src="..\src\images\memphis.jpg" alt="Memphis">
+                    <div>
+                        <a href="#">Biografia de Memphis Depay</a>
+                        <p>Conheça a trajetória do atacante holandês que está fazendo história no Corinthians.</p>
+                    </div>
+                </li>
+                 <li class="noticias-card">
+                    <img src="..\src\images\memphis.jpg" alt="Memphis">
+                    <div>
+                        <a href="#">Biografia de Memphis Depay</a>
+                        <p>Conheça a trajetória do atacante holandês que está fazendo história no Corinthians.</p>
+                    </div>
+                </li>
+            </ul>
+            <p>Siga-nos nas redes sociais!</p>
+        </aside>
+
+         <h3>últimos Vídeos</h3>
+        <iframe width="560" height="315"
+        src="https://www.youtube-nocookie.com/embed/HULzfe36Txk?si=2ynzewfdZvpAAdiA"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+
+          <div class="download-area">
+            <h3><i class="fas fa-file-alt"></i> Conteúdo Exclusivo</h3>
+            <p>Baixe o resumo semanal das notícias do Timão em PDF para ler onde quiser.</p>
+            
+             <button id="btn-download-pdf" class="btn-newsletter" style="margin-top: 20px;">Baixar Notícias em PDF</button>
+             
+        </div>
+
+        <h3>Quer receber novidades?</h3>
+        <p>Clique no botão abaixo para se inscrever na nossa newsletter.</p>
+
+        <a href="..\formulario\forms.html">
+            <button id="btn-newsletter" class="btn-newsletter">Formulário</button>
+        </a> 
+
+     
+    </main>
+    <footer>
+        <p>&copy; 2025 Meu Blog de Corinthians. Todos os direitos reservados.</p>
+        <p>Desenvolvido por @xanxes</p>
+    </footer>
+
+<script>
+    document.getElementById('btn-download-pdf').addEventListener('click', function() {
+        const caminhoDoArquivoPDF = './pdfs/revista.pdf';
+        const nomeDoArquivoAoBaixar = 'Noticias-Corinthians.pdf';
+
+
+        const link = document.createElement('a');
+        link.href = caminhoDoArquivoPDF;
+     
+        link.download = nomeDoArquivoAoBaixar; 
+        
+    
+        document.body.appendChild(link);
+        
+    
+        link.click();
+        
+        
+        document.body.removeChild(link);
+    });
+</script>
+</body>
+</html>
